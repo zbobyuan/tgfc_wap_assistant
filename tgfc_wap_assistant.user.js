@@ -1,4 +1,4 @@
-// ==UserScript==
+﻿// ==UserScript==
 // @name        TGFC论坛wap版助手
 // @namespace   http://www.taiyuanhitech.com/tgfc/
 // @description 增强wap版功能，首先实现每页120贴。
@@ -62,7 +62,7 @@
             } else {
                 elementCount += elements.length;  
                 var nextPageAnchor = p.children('span').next('a');
-                nextPageAnchor.text('下一页').attr('href', replacePageIndex(nextHref, currPageIndex + 1)).nextAll().remove();;
+                nextPageAnchor.text('下一页').attr('href', replacePageIndex(nextHref, currPageIndex + 1)).nextAll().remove();
                 p.append(nextPageAnchor.first().clone().text('尾页').attr('href', replacePageIndex(nextHref, totalPages)));
             }
             p.append($('<span> (wap助手已扩展页码)</span>'));
