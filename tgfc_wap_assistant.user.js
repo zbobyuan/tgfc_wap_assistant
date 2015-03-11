@@ -5,7 +5,7 @@
 // @require http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.0/ScrollMagic.min.js
 // @include     http://wap.tgfcer.com/index.php?action=thread*
 // @include     http://wap.tgfcer.com/index.php?action=forum*
-// @version     1.0
+// @version     1.1
 // @grant none
 // @license MIT License
 // ==/UserScript==
@@ -74,7 +74,7 @@
     }
 
     function dowork(){
-        var paging = $('div.wrap > div:nth-child(2) > span.paging');
+        var paging = $('div.navbar ~ div:first > span.paging');
         if (paging && paging.length > 0) {
             more(paging, location.href.indexOf('action=forum') > 0 ? forum : thread);
         }
